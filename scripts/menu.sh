@@ -71,7 +71,7 @@ _dialog () {
   # Close file descriptor 3
     exec 3>&-
     case $exit_status in
-      $DIALOG_CANCEL | DIALOG_ESC )
+      $DIALOG_CANCEL | $DIALOG_ESC )
         clear
         eval "${_cancelaction}"
         ;;
